@@ -128,10 +128,10 @@
                 <div class="col-md-4 offset-xl-0 mb-5 mb-lg-0">
                     <h4 class="text-uppercase">Redes sociais</h4>
                     <ul class="list-inline">
-                        <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle" role="button" data-bs-hover-animate="swing" href="#"><i class="fa fa-facebook fa-fw" data-bs-hover-animate="swing"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle" role="button" data-bs-hover-animate="swing" href="https://github.com/JuulioCampos/"><i class="fa fa-facebook fa-fw" data-bs-hover-animate="swing"></i></a></li>
                         <li class="list-inline-item"></li>
                         <li class="list-inline-item"></li>
-                        <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle" role="button" data-bs-hover-animate="swing" href="#"><i class="fa fa-github fa-fw" data-bs-hover-animate="swing"></i></a></li>
+                        <li class="list-inline-item"><a class="btn btn-outline-light btn-social text-center rounded-circle" role="button" data-bs-hover-animate="swing" href="https://www.facebook.com/JuuulioCampos"><i class="fa fa-github fa-fw" data-bs-hover-animate="swing"></i></a></li>
                     </ul>
                 </div>
                 <div class="clearfix"></div>
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                     <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Fechar Projeto</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
-                            href="www.<?= $projeto['link'];?>"><i class="fa fa-check"></i>&nbsp;Visualizar Projeto</a></div>
+                            href="http://www.<?= $projeto['link'];?>"><i class="fa fa-check"></i>&nbsp;Visualizar Projeto</a></div>
                 </div>
             </div>
         </div>
