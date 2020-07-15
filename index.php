@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Home - Julio Campos</title>
+    <title>WEB-DEV Julio Campos</title>
     <meta name="description" content="Olá, me chamo Julio Campos e sou estudante de desenvolvimento de sistemas.">
     <link rel="icon" type="image/png" sizes="256x256" href="assets/img/profile.png">
     <link rel="icon" type="image/png" sizes="256x256" href="assets/img/profile.png">
@@ -16,6 +16,51 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+<script type="text/javascript">
+    function verifica() {
+    if (document.forms[0].email.value.length == 0) {
+        alert('Por favor, informe o seu EMAIL.');
+        document.frmEnvia.email.focus();
+        return false;
+    }
+    return true;
+    }
+    
+    function checarEmail(){
+    if( document.forms[0].email.value=="" 
+    || document.forms[0].email.value.indexOf('@')==-1 
+        || document.forms[0].email.value.indexOf('.')==-1 )
+        {
+        alert( "Por favor, informe um E-MAIL válido!" );
+        return false;
+        }
+}
+
+function mask(o, f) {
+  setTimeout(function() {
+    var v = mphone(o.value);
+    if (v != o.value) {
+      o.value = v;
+    }
+  }, 1);
+}
+
+function mphone(v) {
+  var r = v.replace(/\D/g, "");
+  r = r.replace(/^0/, "");
+  if (r.length > 10) {
+    r = r.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+  } else if (r.length > 5) {
+    r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+  } else if (r.length > 2) {
+    r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+  } else {
+    r = r.replace(/^(\d*)/, "($1");
+  }
+  return r;
+}
+</script>
 </head>
 
 <body id="page-top">
@@ -92,6 +137,8 @@
             <div class="text-center mt-4"></div>
         </div>
     </section>
+
+
     <section id="contact">
         <div class="container">
             <h2 class="text-uppercase text-center text-secondary mb-0">Contato</h2>
@@ -103,10 +150,10 @@
                             <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Nome</label><input class="form-control" type="text" id="name" required="" placeholder="Nome" autocomplete="on" inputmode="latin-name" name="nome"><small class="form-text text-danger help-block"></small></div>
                         </div>
                         <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email </label><input class="form-control" type="email" id="email" required="" placeholder="Email " inputmode="email" name="email"><small class="form-text text-danger help-block"></small></div>
+                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Email </label><input class="form-control" type="email" id="email" required="" onblur="checarEmail();" placeholder="Email " inputmode="email" name="email"><small class="form-text text-danger help-block"></small></div>
                         </div>
                         <div class="control-group">
-                            <div class="form-group floating-label-form-group controls mb-0 pb-2"><label>Telefone / WhatsApp</label><input class="form-control" type="tel" id="phone" required="" placeholder="Telefone / WhatsApp" inputmode="tel" name="telefone"><small class="form-text text-danger help-block"></small></div>
+                            <div  class="form-group floating-label-form-group controls mb-0 pb-2"><label>Telefone / WhatsApp</label><input  onkeypress="mask(this, mphone);" id="phone" class="form-control" type="tel" required="" placeholder="Telefone / WhatsApp" inputmode="tel" name="telefone"><small class="form-text text-danger help-block"></small></div>
                         </div>
                         <div class="control-group">
                             <div class="form-group floating-label-form-group controls mb-5 pb-2"><textarea class="form-control" id="message" required="" placeholder="Mensagem" rows="5" name="mensagem"></textarea><small class="form-text text-danger help-block"></small></div>
@@ -162,7 +209,7 @@
                         </div>
                     </div>
                     <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Fechar Projeto</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
-                            href="http://www.<?= $projeto['link'];?>"><i class="fa fa-check"></i>&nbsp;Visualizar Projeto</a></div>
+                            href="http://<?= $projeto['link'];?>"><i class="fa fa-check"></i>&nbsp;Visualizar Projeto</a></div>
                 </div>
             </div>
         </div>
