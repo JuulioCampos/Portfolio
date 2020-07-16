@@ -8,7 +8,6 @@
         $descricao = $_POST['descricao'];
         $link =  $_POST['link'];
         $foto = $_FILES["foto"];
-        var_dump($foto);
 
         if(!empty($foto['name'])){
             $largura = 1920;
@@ -34,7 +33,7 @@
                 // Pega extensão da imagem
                 preg_match("/\.(gif|bmp|png|jpg|jpeg){1}$/i", $foto["name"], $ext);
                 // Gera um nome único para a imagem
-                $nome_imagem = md5(uniqid(time())). "." . $ext[1];
+                $nome_imagem = $titulo. "." . $ext[1];
                 // Caminho de onde ficará a imagem
                 $caminho_imagem = "../assets/img/portfolio/" . $nome_imagem;
                 // Faz o upload da imagem para seu respectivo caminho

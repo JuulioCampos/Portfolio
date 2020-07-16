@@ -1,5 +1,6 @@
 <?php
   require_once 'controls/conexao.php';
+  require_once 'controls/auth_acess.php';
 
 ?>
 <head>
@@ -9,7 +10,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>cadastro de projeto</title>
 </head>
 <div class="wrapper fadeInDown">
   <div id="formContent">
@@ -28,6 +29,10 @@
       <input  type="file" name="foto" />
       <input type="submit" class="fadeIn fourth" name="cadastrar" value="Entrar">
     </form>
+    <a href="controls/logout.php">
+        <input style="background-color:rgb(248, 83, 83)" type="submit" class="fadeIn fourth" name="Sair" value="Sair">
+    </a>
+     <br/>
     <a href="index.php"><span class="backto">Voltar a página principal</span></a>
 
   </div>

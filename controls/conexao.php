@@ -1,9 +1,9 @@
 <?php
 
-    function novaConexao($banco = 'portfolio'){
+    function novaConexao($banco = 'jpserr41_Portfolio'){
         $servidor = 'localhost';
-        $usuario = 'root';
-        $senha = '';
+        $usuario = 'jpserr41_root';
+        $senha = 'Social07.';
 
         $conexao = new mysqli($servidor, $usuario, $senha, $banco);
 

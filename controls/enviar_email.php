@@ -3,10 +3,10 @@ ini_set('display_errors', 1);
 
 error_reporting(E_ALL);
 
-if(!isset($_REQUEST['telefone']) || !isset($_REQUEST['Message']) || !isset($_REQUEST['email']) || !isset($_REQUEST['nome'])){
-    echo "<script>alert('E-mail não foi enviado, tente novamente!'); window.location.href ='../index.php?mail=erro'</script>";
+if(isset($_REQUEST['telefone']) || isset($_REQUEST['Message']) || isset($_REQUEST['email']) || isset($_REQUEST['nome'])){
+    echo "<script>alert('E-mail enviado com sucesso!'); window.location.href ='../index.php?email=sucesso'</script>";
     }else{
-        echo "<script>alert('E-mail enviado com sucesso!'); window.location.href ='../index.php?email=sucesso'</script>";
+        echo "<script>alert('E-mail não foi enviado, tente novamente!'); window.location.href ='../index.php?mail=erro'</script>";
     }
     //   <!-- codigo requisição -->
         

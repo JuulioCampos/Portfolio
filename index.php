@@ -112,11 +112,13 @@ function mphone(v) {
                     $conexao->close();
                 
                 foreach($projetos as $projeto   ):?>
-                <div class="col-md-6 col-lg-4">
+                <div class="shadow-sm p-3 col-md-6 col-lg-4">
+                   <center> <label class="text-justify"><?= $projeto['titulo'];?></label></center>
                     <a class="d-block mx-auto portfolio-item" data-toggle="modal" href="#portfolio-modal-1">
                         <div class="d-flex portfolio-item-caption position-absolute h-100 w-100">
                             <div class="my-auto portfolio-item-caption-content w-100 text-center text-white"><i class="fa fa-search-plus fa-3x"></i></div>
-                        </div><img class="img-fluid" src="assets\img\portfolio\<?= $projeto['img'];?>"></a>
+                        </div><img width="100%"  class="img-fluid" src="assets\img\portfolio\<?= $projeto['img'];?>"></a>
+                        
                 </div>
                 <?php endforeach ?>
             </div>
@@ -208,8 +210,8 @@ function mphone(v) {
                             </div>
                         </div>
                     </div>
-                    <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button" href="#"><i class="fa fa-close"></i>&nbsp;Fechar Projeto</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
-                            href="http://<?= $projeto['link'];?>"><i class="fa fa-check"></i>&nbsp;Visualizar Projeto</a></div>
+                    <div class="modal-footer pb-5"><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss "    data-dismiss="modal" role="button" aria-label="Close"><i class="fa fa-close"></i>&nbsp;Fechar Projeto</a><a class="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
+                            href="http://www.github.com/juuliocampos"><i class="fa fa-check"></i>&nbsp;Visualizar Projeto</a></div>
                 </div>
             </div>
         </div>

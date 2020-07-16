@@ -1,3 +1,10 @@
+<?php 
+	session_start();
+	if(isset($_SESSION['user'])){
+		echo "<script>window.location.href ='cad_projetos.php' </script>";
+	}
+
+?>
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
     <link rel="stylesheet" href="assets\bootstrap\login.css">
@@ -11,8 +18,10 @@
         if (isset($_GET['login']) && $_GET['login'] == 'invalido'){ 
         echo " <div style='font-size:1.5rem; color:white; text-align:center;' class='bg-danger'>Usuário ou senha inválido.</div>";
            
-        }elseif (isset($_GET['login']) && $_GET['login'] == 'deslogado'){ 
+        }elseif (isset($_GET['login']) && $_GET['login'] == 'unknowuser'){ 
             echo " <div style='font-size:1.5rem; color:white; text-align:center;' class='bg-danger'>Usuário não logado!!</div>";   
+		}elseif (isset($_GET['login']) && $_GET['login'] == 'false'){ 
+            echo " <div style='font-size:1.5rem; color:white; text-align:center;' class='bg-danger'>Usuário deslogado com sucesso!!</div>";   
 		}
 
     ?>
