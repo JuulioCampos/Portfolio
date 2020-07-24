@@ -3,11 +3,7 @@ ini_set('display_errors', 1);
 
 error_reporting(E_ALL);
 
-if(isset($_REQUEST['telefone']) || isset($_REQUEST['Message']) || isset($_REQUEST['email']) || isset($_REQUEST['nome'])){
-    echo "<script>alert('E-mail enviado com sucesso!'); window.location.href ='../index.php?email=sucesso'</script>";
-    }else{
-        echo "<script>alert('E-mail não foi enviado, tente novamente!'); window.location.href ='../index.php?mail=erro'</script>";
-    }
+
     //   <!-- codigo requisição -->
         
       $from = "Julio_Neto@icloud.com";
@@ -15,7 +11,17 @@ if(isset($_REQUEST['telefone']) || isset($_REQUEST['Message']) || isset($_REQUES
       $email = $_REQUEST['email'];
       $nome = $_REQUEST['nome'];
       $telefone = $_REQUEST['telefone'];
-      $mensagem = $_REQUEST['Mensagem'];
+      $mensagem = $_REQUEST['mensagem'];
+
+    
+       if(empty($email) && empty($nome) && empty($telefone)) {
+           echo "<script> alert('Informações incorretas, tente novamente.'); window.location.href ='../index.php?mail=erro'</script>" ;
+       }else{
+           echo "<script> alert('email enviado com sucesso');  window.location.href ='../index.php?mail=sucesso'</script>" ;
+       }
+        
+    
+
 
           $corpoEmail = "<strong> Mensagem de Contato  <br> <br></strong>";
           $corpoEmail .= "<strong> Nome: </strong> $nome";
